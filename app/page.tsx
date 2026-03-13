@@ -1,12 +1,33 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
-import Image from "next/image";
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 export default function Home() {
   return (
     <div>
-      <MaxWidthWrapper className='relative'>
-        <div className='bg-glow' />
-        <div>hello</div>
+      <MaxWidthWrapper className='relative h-[120vh]'>
+        <div className='bg-glow z-100 absolute top-0 left-0 right-0' />
+        <div className='pt-20'>
+          {/* badge */}
+          <div className='flex items-center gap-2 mb-10 px-5 py-2 rounded-full bg-primary/10 w-fit mx-auto border border-primary/20'>
+            <div className='w-2 h-2 bg-primary rounded-full shrink-0 animate-pulse' />
+            <span className='text-xs uppercase text-primary tracking-wider font-medium'>Live congressional data</span>
+          </div>
+          <h1 className='font-dm-serif-display text-hero-title-main text-hero-title-size text-center leading-tight'>Follow the money.
+          <span className='font-inter text-primary italic block'>Hold power accountable.</span>
+          </h1>
+          <p className='mt-4 md:mt-5 text-center text-hero-description-size max-w-lg mx-auto leading-loose'>See exactly who funds your representatives, how they vote, and whether those two things are connected. Democracy requires transparency.</p>
+        </div>
+
+        <div className='mt-20 max-w-lg flex flex-col gap-2 mx-auto'>
+            <Label htmlFor="search" className='sr-only'>Search</Label>
+            <Input 
+              id="search" 
+              type="text" 
+              placeholder="Search any congress menu, donar, or bill..." 
+              className='ring-primary outline-none focus-visible:ring-0 border focus:border-primary/40!  bg-white/5 h-12 border-white/20'
+              />
+        </div>
       </MaxWidthWrapper>
     </div>
   );

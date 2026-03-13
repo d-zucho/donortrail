@@ -7,8 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+  --font-dm-serif-display: var(--font-dm-serif-display);
+  --font-bebas-neue: var(--font-bebas-neue);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -53,8 +54,8 @@
   --color-hero-description: var(--text-1);
 
   /* font size */
-  --text-hero-title: clamp(2.8rem, 7vw, 6rem);
-  --text-hero-description: clamp(0.95rem, 2vw, 1.15rem);
+  --text-hero-title-size: clamp(2.8rem, 7vw, 6rem);
+  --text-hero-description-size: clamp(1rem, 2vw, 1.15rem);
   --text-stat-value: clamp(2rem, 4vw, 3.5rem);
 }
 
@@ -112,7 +113,7 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(0.922 0 0);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.837 0.128 66.29);
@@ -145,7 +146,7 @@
 }
 
 .bg-glow {
-  position: fixed;
+  position: absolute;
   top: -20vh;
   left: 50%;
   transform: translateX(-50%);

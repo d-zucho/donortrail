@@ -45,17 +45,29 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  
+  --color-nav-text: var(--text-1);
+  --color-hero-title-main: var(--hero-title-main);
+  --color-hero-title-accent: var(--primary);
+  --color-hero-description: var(--text-1);
+
+  /* font size */
+  --text-hero-title: clamp(2.8rem, 7vw, 6rem);
+  --text-hero-description: clamp(0.95rem, 2vw, 1.15rem);
+  --text-stat-value: clamp(2rem, 4vw, 3.5rem);
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --hero-title-main: oklch(0.984 0.002 247.839);
+  --background: rgb(10, 10, 11);
+  --foreground: oklch(0.714 0.02 261.483);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.553 0.195 38.402);
-  --primary-foreground: oklch(0.98 0.016 73.684);
+  --primary: oklch(0.8434 0.1684 90.5504);
+  --primary-foreground: oklch(0.145 0.002 286.131);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.97 0 0);
@@ -80,17 +92,19 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --text--1: oklch(0.714 0.02 261.483);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --hero-title-main: oklch(0.984 0.002 247.839);
+  --background: rgb(10, 10, 11);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.47 0.157 37.304);
-  --primary-foreground: oklch(0.98 0.016 73.684);
+  --primary: oklch(0.8434 0.1684 90.5504);
+  --primary-foreground: oklch(0.145 0.002 286.131);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -114,6 +128,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --text-1: oklch(0.714 0.02 261.483);
+  
 }
 
 @layer base {
@@ -126,4 +142,16 @@
   html {
     @apply font-sans;
   }
+}
+
+.bg-glow {
+  position: fixed;
+  top: -20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 60vh;
+  background: radial-gradient(rgba(245, 197, 24, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }

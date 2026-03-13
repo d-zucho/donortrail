@@ -1,0 +1,27 @@
+primary: hsla(47, 92%, 53%, 1)
+
+
+# Nav Link Buttons
+text-1: hsla(218, 11%, 65%, 1)
+hover text: #var(--primary);
+hover-bg: rgba(245, 197, 24, 0.08) // primary at 5% opacity
+
+
+# Titles
+Hero: hsla(210, 20%, 98%, 1)
+Hero accent: var(--primary)
+Hero font-size: clamp(2.8rem, 7vw, 6rem);
+rgb(10, 10, 11)
+
+
+# Section Border
+border: hsla(0, 100%, 100%, 0.06) 
+
+hero-description: hsla(218, 11%, 65%, 1)
+hero-description font-size: clamp(0.95rem, 2vw, 1.15rem)
+
+stat-description: var(--text-1);
+stat-value: var(--primary);
+stat-value font-size: clamp(2rem, 4vw, 3.5rem);
+
+<div style="position: fixed; top: -20vh; left: 50%; transform: translateX(-50%); width: 80vw; height: 60vh; background: radial-gradient(rgba(245, 197, 24, 0.06) 0%, transparent 70%); pointer-events: none; z-index: 0;" data-pc-src="src/App.jsx:168"></div>

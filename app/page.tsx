@@ -1,6 +1,7 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -27,6 +28,14 @@ export default function Home() {
               placeholder="Search any congress menu, donar, or bill..." 
               className='ring-primary outline-none focus-visible:ring-0 border focus:border-primary/40!  bg-white/5 h-12 border-white/20'
               />
+              <div className='flex gap-2 w-fit mx-auto mt-4'>
+                <Button className='min-w-52 relative border-b border-primary/50 group'>
+                  <div className='shadow-[inset_-2px_-2px_4px_1px_rgba(0,0,0,0.4)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-300' />
+                  <span>Search</span>
+                  <div className='shadow-[inset_2px_2px_4px_1px_rgba(255,255,255,0.2)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-300' />
+                </Button>
+                <Button className='min-w-52' variant="outline">See how it works</Button>
+              </div>
         </div>
       </MaxWidthWrapper>
     </div>

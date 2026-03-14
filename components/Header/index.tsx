@@ -34,7 +34,9 @@ const Header = () => {
         <div className='flex items-center justify-between'>
           {/* logo */}
           <div className='flex items-center gap-5 shrink-0'>
+            <Link href='/'>
             <span className='font-bold font-bebas-neue text-4xl text-primary'>Donor Trail</span>
+            </Link>
             
           {/* nav links */}
           <nav className='flex gap-2 items-center hidden md:flex'>
@@ -53,8 +55,12 @@ const Header = () => {
             </div>
           {/* button */}
           <div className='hidden md:flex gap-2'>
-            <Link href='/login' className={buttonVariants({ variant: "default", className: 'px-5 py-5 min-w-24 font-medium' })}>Sign Up Free</Link>
-            {/* <Link href='/register' className={buttonVariants({ variant: "outline", className: 'border-border/50! px-5 py-5 min-w-24 font-medium' })}>Outline</Link> */}
+            <Link href='/login' className={buttonVariants({ variant: "default", className: 'px-5 py-5 min-w-24 font-medium relative group' })}>
+            <div className='shadow-[inset_-2px_-2px_4px_1px_rgba(0,0,0,0.4)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-400' />
+            Sign Up Free
+            <div className='shadow-[inset_2px_2px_4px_1px_rgba(255,255,255,0.2)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-400' />
+            </Link>
+            
           </div>
           <div className="md:hidden">
             <MobileNav />

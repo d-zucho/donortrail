@@ -39,7 +39,7 @@ const Header = () => {
             </Link>
             
           {/* nav links */}
-          <nav className='flex gap-2 items-center hidden md:flex'>
+          <nav className='gap-2 items-center hidden md:flex'>
             {
               NAV_LINKS.map((link) => (
                 <Link 

@@ -1,9 +1,18 @@
-type Nav_Link = {
+import { LucideIcon } from 'lucide-react';
+
+export type Nav_Link = {
   href: string;
   label: string;
 }
 
-type THome_Data_Point = {
+export type THome_Data_Point = {
   stat: number;
   description: string;
+}
+
+export type TFeatureCard = {
+  title: string;
+  description: string;
+  icon: string;
+  src: string;
 }

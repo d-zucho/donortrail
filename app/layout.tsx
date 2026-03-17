@@ -3,6 +3,7 @@ import { DM_Serif_Display, Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from '@/components/Header';
+import Footer from '@/sections/Footer';
 
 const inter = Inter({subsets:['latin'],variable:'--font-inter', display: "swap"});
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

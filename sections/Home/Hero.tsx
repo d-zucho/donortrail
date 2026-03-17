@@ -12,7 +12,10 @@ const Hero = () => {
         <div className='pt-20'>
           {/* badge */}
           <div className='flex items-center gap-2 mb-10 px-5 py-2 rounded-full bg-primary/10 w-fit mx-auto border border-primary/20'>
-            <div className='w-2 h-2 bg-primary rounded-full shrink-0 animate-pulse' />
+            <div className='relative w-1.5'>
+              <div className='w-1 h-1 absolute top-1/2 left-1/2 -translate-x-1/2 bg-primary rounded-full shrink-0 animate-ping' />
+              <div className='w-1.5 h-1.5 blur-sm absolute top-1/2 left-1/2 -translate-x-1/2 bg-primary rounded-full shrink-0 animate-ping' />
+            </div>
             <span className='text-xs uppercase text-primary tracking-wider font-medium'>Live congressional data</span>
           </div>
           <h1 className='font-dm-serif-display text-hero-title-main text-hero-title-size text-center leading-tight'>Follow the money.

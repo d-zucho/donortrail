@@ -32,18 +32,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <AuthProvider>
-    <html lang="en" className={cn("font-sans", inter.variable)}>
-      <body
-        className={`${inter.variable} ${dmSerifDisplay.variable} ${bebasNeue.variable} antialiased relative`}
-      >
-
-        <Header />
-        {/* <HeroHeader /> */}
-        {children}
-        <Footer />
-      </body>
-    </html>
-        </AuthProvider>
+      <html lang="en" className={cn("font-sans", inter.variable)}>
+        <body
+          className={`${inter.variable} ${dmSerifDisplay.variable} ${bebasNeue.variable} antialiased relative`}
+        >
+          <AuthProvider>
+            <Header />
+            {/* <HeroHeader /> */}
+            {children}
+            <Footer />
+          </AuthProvider>
+        </body>
+      </html>
   );
 }

@@ -1,3 +1,4 @@
+import { Icon } from '@tabler/icons-react';
 import { LucideIcon } from 'lucide-react';
 
 export type Nav_Link = {
@@ -15,4 +16,12 @@ export type TFeatureCard = {
   description: string;
   icon: string;
   src: string;
+}
+
+export type TWhyUs2_Card = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  icon2?: Icon | LucideIcon | null;
+  
 }

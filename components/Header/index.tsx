@@ -16,15 +16,15 @@ const Header = () => {
   const { getUser, isLoading } = useKindeBrowserClient()
   const user = getUser()
 
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setIsScrolled(true)
-    } else {
-      setIsScrolled(false)
-    }
-  }
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])

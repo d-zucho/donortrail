@@ -1,4 +1,6 @@
-import { Nav_Link, TFeatureCard, THome_Data_Point } from '@/lib/types';
+import { Nav_Link, TFeatureCard, THome_Data_Point, TWhyUs2_Card } from '@/lib/types';
+import { IconCashBanknote } from '@tabler/icons-react';
+import { BellRing, Link2, PiggyBank } from 'lucide-react';
 
 export const NAV_LINKS: Nav_Link[] = [
   {
@@ -71,4 +73,23 @@ export const FEATURED_CARDS: TFeatureCard[] = [
     icon: "🌐" ,
     src: "/globe.png"
   }
+]
+
+export const WHY_US_2_CARDS: TWhyUs2_Card[] = [
+  {
+    title: "Money-Vote Connections",
+    description: "Our algorithm surfaces statistically significant patterns between donation sources and voting behavior. The receipts are all there.",
+    icon: Link2,
+  },
+  {
+    title: "Donor Mapping",
+    description: "See every major contribution, broken down by industry, PAC, and individual donor — updated with each FEC filing.",
+    icon: PiggyBank,
+    icon2: IconCashBanknote
+  },
+  {
+    title: "Vote Tracking",
+    description: "Every floor vote logged and searchable. Filter by topic, date, party line, or how it relates to a member's top donors.",
+    icon: BellRing,
+  },
 ]

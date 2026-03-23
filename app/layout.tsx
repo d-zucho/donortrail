@@ -4,6 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from '@/components/Header';
 import Footer from '@/sections/Footer';
+import { AuthProvider } from './AuthProvider';
+import { HeroHeader } from "@/components/Header/Header";
 
 const inter = Inter({subsets:['latin'],variable:'--font-inter', display: "swap"});
 
@@ -30,14 +32,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+      <AuthProvider>
     <html lang="en" className={cn("font-sans", inter.variable)}>
       <body
         className={`${inter.variable} ${dmSerifDisplay.variable} ${bebasNeue.variable} antialiased relative`}
       >
+
         <Header />
+        {/* <HeroHeader /> */}
         {children}
         <Footer />
       </body>
     </html>
+        </AuthProvider>
   );
 }

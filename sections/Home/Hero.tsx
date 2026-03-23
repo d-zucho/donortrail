@@ -2,6 +2,7 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 
 const Hero = () => {
@@ -35,7 +36,8 @@ const Hero = () => {
               <div className='flex flex-col sm:flex-row gap-4 w-fit mx-auto mt-4'>
                 <Button className='min-w-52 relative border-b border-primary/50 group'>
                   <div className='shadow-[inset_-2px_-2px_4px_1px_rgba(0,0,0,0.4)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-300' />
-                  <span>Search</span>
+                  <span>Explore the trail</span>
+                  <ArrowRight className='group-hover:animate-move-arrow transition-transform' />
                   <div className='shadow-[inset_2px_2px_4px_1px_rgba(255,255,255,0.2)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-300' />
                 </Button>
                 <Button className='min-w-52' variant="outline">See how it works</Button>

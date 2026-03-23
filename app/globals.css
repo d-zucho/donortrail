@@ -59,6 +59,16 @@
   --text-stat-value: clamp(2rem, 4vw, 3.5rem);
   --text-h2-size: clamp(1.8rem, 4vw, 2.8rem);
   --animate-arrow-right: var(--arrow-right);
+  --animate-move-arrow: move-arrow 1.5s ease-in-out infinite;
+
+  @keyframes move-arrow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
 }
 
 :root {
@@ -97,6 +107,9 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --text--1: oklch(0.714 0.02 261.483);
+  --animation-arrow: arrow 1s ease-in-out infinite;
+
+ 
 }
 
 .dark {

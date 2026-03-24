@@ -12,7 +12,7 @@ const TransparencyPipeline = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative mt-14 max-w-[990px] mx-auto">
                 <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-px bg-white/10 pipeline-connector" />
-                <div className="pipeline-dot top-[46px] hidden md:block" />
+                <div className="pipeline-dot top-[46px] hidden md:block" /> 
                 <div className="pipeline-dot top-[46px] hidden md:block" />
 
                 {
@@ -20,8 +20,8 @@ const TransparencyPipeline = () => {
                         const Icon = data.icon
                         return (
                             <div key={data.number} className="relative z-10 text-center group animate-on-scroll visible">
-                                <div className="w-24 h-24 glass-card border border-primary/20 rounded-full flex items-center justify-center mx-auto mb-8 
-                                group-hover:shadow-[0_0_30px_rgba(255,215,0,0.2)] transition-shadow bg-[#111]">
+                                <div className="w-24 h-24 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-8 
+                                group-hover:shadow-[0_0_30px_rgba(255,215,0,0.2)] transition-all duration-300 bg-[#111]">
                                     <span className="text-4xl">
                                         <Icon size={32} className="text-primary" />
                                     </span>

@@ -63,6 +63,8 @@
   --text-h2-size: clamp(1.8rem, 4vw, 2.8rem);
   --animate-arrow-right: var(--arrow-right);
   --animate-move-arrow: move-arrow 1.5s ease-in-out infinite;
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-fade-in: fade-in 2s ease;
 
   @keyframes move-arrow {
     0%, 100% {
@@ -216,6 +218,17 @@
   animation: move-dot 4s linear infinite;
 }
 
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
 @keyframes move-dot {
   0% {
     opacity: 0;
@@ -233,6 +246,29 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .section-label {
   @apply text-xs font-bold tracking-[0.15em] uppercase text-primary mb-3
 }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top-color: rgba(255, 255, 255, 0.08);
+  border-right-color: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  border-left-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.bg-dark-shadow {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+

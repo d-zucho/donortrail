@@ -5,7 +5,7 @@ import React from 'react'
 
 const AboutCTA = () => {
   return (
-    <section className='my-32'>
+    <section className='my-20'>
         <MaxWidthWrapper>
         <div className='px-10 py-8 bg-surface-container/50 rounded-2xl border-2 border-white/3 max-w-6xl mx-auto'>
             <span className='section-label'>Take action</span>

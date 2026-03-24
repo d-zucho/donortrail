@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-bg-secondary: rgb(13, 13, 13);
+  --color-surface-container: var(--surface-container);
   --font-inter: var(--font-inter);
   --font-dm-serif-display: var(--font-dm-serif-display);
   --font-bebas-neue: var(--font-bebas-neue);
@@ -78,6 +79,7 @@
   --title-main: rgb(249, 250, 251);
   --background: rgb(10, 10, 11);
   --bg-secondary: rgb(13, 13, 13);
+  --surface-container: rgb(26, 26, 26);
   --foreground: oklch(0.714 0.02 261.483);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -120,6 +122,7 @@
   --title-main: rgb(249, 250, 251);
   --background: rgb(10, 10, 11);
   --bg-secondary: rgb(13, 13, 13);
+  --surface-container: rgb(26, 26, 26);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -228,4 +231,8 @@
     left: 90%;
     opacity: 0;
   }
+}
+
+.section-label {
+  @apply text-xs font-bold tracking-[0.15em] uppercase text-primary mb-3
 }

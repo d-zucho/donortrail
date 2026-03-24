@@ -7,7 +7,7 @@ import { motion } from 'motion/react'
 
 const WhyUs2 = () => {
   return (
-    <section>
+    <section className=''>
         <MaxWidthWrapper>
         {/* heading  */}
         <div className='flex flex-col mb-16'>

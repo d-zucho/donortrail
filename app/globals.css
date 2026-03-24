@@ -7,6 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-bg-secondary: rgb(13, 13, 13);
   --font-inter: var(--font-inter);
   --font-dm-serif-display: var(--font-dm-serif-display);
   --font-bebas-neue: var(--font-bebas-neue);
@@ -55,6 +56,7 @@
 
   /* font size */
   --text-hero-title-size: clamp(2.8rem, 7vw, 6rem);
+  --text-secondary-hero-title-size: clamp(2.2rem, 5vw, 4rem);
   --text-hero-description-size: clamp(1rem, 2vw, 1.15rem);
   --text-stat-value: clamp(2rem, 4vw, 3.5rem);
   --text-h2-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -75,6 +77,7 @@
   --hero-title-main: oklch(0.984 0.002 247.839);
   --title-main: rgb(249, 250, 251);
   --background: rgb(10, 10, 11);
+  --bg-secondary: rgb(13, 13, 13);
   --foreground: oklch(0.714 0.02 261.483);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -116,6 +119,7 @@
   --hero-title-main: oklch(0.984 0.002 247.839);
   --title-main: rgb(249, 250, 251);
   --background: rgb(10, 10, 11);
+  --bg-secondary: rgb(13, 13, 13);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -192,5 +196,36 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+
+/* About Page */
+
+.pipeline-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 100%;
+  filter: blur(2px);
+  box-shadow: 0 0 10px #ffd700;
+  animation: move-dot 4s linear infinite;
+}
+
+@keyframes move-dot {
+  0% {
+    opacity: 0;
+    left: 11%;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
   }
 }

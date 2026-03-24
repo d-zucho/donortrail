@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import Header from '@/components/Header';
 import Footer from '@/sections/Footer';
 import { AuthProvider } from './AuthProvider';
-import { HeroHeader } from "@/components/Header/Header";
 
 const inter = Inter({subsets:['latin'],variable:'--font-inter', display: "swap"});
 

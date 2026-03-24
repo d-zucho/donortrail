@@ -1,6 +1,6 @@
-import { Nav_Link, TFeatureCard, THome_Data_Point, TWhyUs2_Card } from '@/lib/types';
-import { IconCashBanknote } from '@tabler/icons-react';
-import { BellRing, Link2, PiggyBank } from 'lucide-react';
+import { Nav_Link, TFeatureCard, THome_Data_Point, TPipeline_Data, TWhyUs2_Card } from '@/lib/types';
+import { IconCashBanknote, IconReportAnalytics, IconSpeakerphone } from '@tabler/icons-react';
+import { BellRing, Database, Link2, PiggyBank } from 'lucide-react';
 
 export const NAV_LINKS: Nav_Link[] = [
   {
@@ -92,4 +92,25 @@ export const WHY_US_2_CARDS: TWhyUs2_Card[] = [
     description: "Every floor vote logged and searchable. Filter by topic, date, party line, or how it relates to a member's top donors.",
     icon: BellRing,
   },
+]
+
+export const PIPELINE_DATA: TPipeline_Data[] = [
+  {
+    number: "01",
+    title: "Aggregate Data",
+    description: "Daily updated from FEC and Cogress.gov, centralizing disparate data points.",
+    icon: Database
+  },
+  {
+    number: "02",
+    title: "Analyze Connections",
+    description: "Algorithms cross-reference dates with committee hearings to reveal patterns of influence.",
+    icon: IconReportAnalytics
+  },
+  {
+    number: "03",
+    title: "Empower Public",
+    description: "Findings presented in editorial formats, giving you evidence for accountability.",
+    icon: IconSpeakerphone
+  }
 ]

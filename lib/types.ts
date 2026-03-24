@@ -25,3 +25,10 @@ export type TWhyUs2_Card = {
   icon2?: Icon | LucideIcon | null;
   
 }
+
+export type TPipeline_Data = {
+  number: string;
+  title: string;
+  description: string;
+  icon: LucideIcon | Icon
+}

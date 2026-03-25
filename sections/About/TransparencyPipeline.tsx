@@ -6,7 +6,7 @@ import { Database } from "lucide-react"
 
 const TransparencyPipeline = () => {
   return (
-    <section className='my-32  py-32'>
+    <section className='my-20  py-20'>
         <MaxWidthWrapper>
             <h2 className="text-h2-size max-md:text-center font-dm-serif-display text-title-main text-left">The Transparency <span className="text-primary">Pipeline</span></h2>
 

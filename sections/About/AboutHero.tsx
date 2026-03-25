@@ -7,6 +7,10 @@ const AboutHero = () => {
   return (
     <section className='my-32'>
         <MaxWidthWrapper>
+        <div className='flex items-center gap-2 mb-10 px-5 py-2 rounded-full bg-primary/10 w-fit mx-auto border border-primary/20'>
+            
+            <span className='text-xs uppercase text-primary tracking-wider font-medium'>Our Mission</span>
+          </div>
             <div className='relative'>
                 <div className='flex flex-col gap-5 items-center'>
                     <h1 className='font-dm-serif-display text-hero-title-main text-secondary-hero-title-size text-center leading-tight'>We believe accountability

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from '@/components/Header';
 import Footer from '@/sections/Footer';
 import { AuthProvider } from './AuthProvider';
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({subsets:['latin'],variable:'--font-inter', display: "swap"});
 
@@ -35,12 +36,12 @@ export default function RootLayout({
         <body
           className={`${inter.variable} ${dmSerifDisplay.variable} ${bebasNeue.variable} antialiased relative`}
         >
-          <AuthProvider>
+          <ClerkProvider>
             <Header />
             {/* <HeroHeader /> */}
             {children}
             <Footer />
-          </AuthProvider>
+          </ClerkProvider>
         </body>
       </html>
   );

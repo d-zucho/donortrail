@@ -1,17 +1,23 @@
-import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
-import { NextRequest } from 'next/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 
-export default withAuth(
-  async function middleware(req : NextRequest) {
-  },
-  {
-    // Middleware still runs on all routes, but doesn't protect the home route
-    publicPaths: ["/", "/about"], // e.g. ["/api/public", "/blog", "/about"]
+const isProtectedRoute = createRouteMatcher(['/admin(.*)', '/dashboard'])
+
+export default clerkMiddleware( async (auth, req) => {
+  const authObject = await auth()
+
+  if (isProtectedRoute(req) && !authObject.userId) {
+    return NextResponse.redirect(new URL('/sign-in', req.url))
   }
-);
+
+  return NextResponse.next()
+})
 
 export const config = {
   matcher: [
+    // Skip Next.js internals and all static files, unless found in search params
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
   ],
 }

@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   description: "See exactly who funds your representatives, how they vote, and whether those two things are connected. Democracy requires transparency.",
 };
 
+/**
+ * Provides the application's root HTML layout, global font variables, and authentication provider.
+ *
+ * @param children - The page content to render inside the layout between the header and footer
+ * @returns The root HTML element containing the configured <body>, <ClerkProvider>, <Header>, `children`, and <Footer>
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

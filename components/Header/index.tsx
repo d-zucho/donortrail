@@ -8,7 +8,7 @@ import MobileNav from './MobileNav'
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
-import { Show, SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs'
+import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs'
 
   
 const Header = () => {

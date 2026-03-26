@@ -9,10 +9,12 @@ import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextj
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 
   
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const path = usePathname()
   const { getUser, isLoading } = useKindeBrowserClient()
   const user = getUser()
 
@@ -46,7 +48,7 @@ const Header = () => {
                 <Link 
                 href={link.href} 
                 key={link.href}
-                className={buttonVariants({ variant: "ghost", className: 'font-medium' })}
+                className={buttonVariants({ variant: "ghost", className: `font-medium ${path === link.href ? 'text-primary bg-primary/5' : ''}` })}
                 >
                   {link.label}
                 </Link>

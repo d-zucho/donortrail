@@ -15,10 +15,10 @@ const AboutCTA = () => {
                     <p className='leading-relaxed text-lg max-w-xl'>Join 50,000+ citizens monitoring the financial heart of our democracy. Use our professional tools to track any representative.</p>
                 </div>
                 <div>
-                    <Button className='px-5 py-7 lg:px-12 lg:text-base lg:font-medium lg:py-8 hover:outline-transparent font-bold flex items-center hover:scale-103 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20'>
+                    <Button className='px-5 py-7 group lg:px-12 lg:text-base lg:font-medium lg:py-8 hover:outline-transparent font-bold flex items-center hover:scale-103 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20'>
                     <div className='shadow-[inset_-2px_-2px_4px_1px_rgba(0,0,0,0.4)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-400' />
                         Explore the Data
-                        <ArrowRight className='w-5! h-5!' />    
+                        <ArrowRight className='w-5! h-5! group-hover:animate-[arrow_1s_infinite]' />    
                         <div className='shadow-[inset_2px_2px_4px_1px_rgba(255,255,255,0.2)] absolute inset-0 rounded-md group-hover:shadow-none transition-all duration-400' />  
                     </Button>
                 </div>

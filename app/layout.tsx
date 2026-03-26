@@ -4,7 +4,6 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from '@/components/Header';
 import Footer from '@/sections/Footer';
-import { AuthProvider } from './AuthProvider';
 import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({subsets:['latin'],variable:'--font-inter', display: "swap"});

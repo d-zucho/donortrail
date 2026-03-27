@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -67,7 +67,8 @@
   --animate-fade-in: fade-in 2s ease;
 
   @keyframes move-arrow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(0);
     }
     50% {
@@ -115,8 +116,6 @@
   --sidebar-ring: oklch(0.708 0 0);
   --text--1: oklch(0.714 0.02 261.483);
   --animation-arrow: arrow 1s ease-in-out infinite;
-
- 
 }
 
 .dark {
@@ -156,7 +155,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --text-1: oklch(0.714 0.02 261.483);
-  
 }
 
 .text-h2-size {
@@ -204,7 +202,6 @@
   }
 }
 
-
 /* About Page */
 
 .pipeline-dot {
@@ -247,12 +244,16 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .section-label {
-  @apply text-xs font-bold tracking-[0.15em] uppercase text-primary mb-3
+  @apply text-xs font-bold tracking-[0.15em] uppercase text-primary mb-2;
 }
 
 .glass-card {
@@ -269,6 +270,4 @@
 
 .bg-dark-shadow {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
 }
-
